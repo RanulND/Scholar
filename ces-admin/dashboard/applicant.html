@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>CES | Scholar</title>
+    <meta content="" name="description">
+
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="../../assets/img/CES Logo PNG.png" rel="icon">
+    <link href="../../assets/img/CES Logo PNG.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    <script src="../../assets/js/guard.js"></script>
+</head>
+
+<body>
+    <header id="header dashboard" class="header">
+        <div class="container-fluid container-xl d-flex align-items-center">
+
+            <a href="#" class="logo d-flex align-items-center">
+                <div>
+                    <img src="../../assets/img/CES Logo PNG.png" alt="">
+                </div>
+            </a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="index.html">CES | Scholar - Admin</a></li>
+                    <li  id="admin"></li>
+              <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
+                    <div class="text-center" style="margin-left: 190%;">
+                        <a class="getstarted scrollto" onclick="logOut()">Sign Out</a>
+                    </div>
+                </ul>
+
+            </nav><!-- .navbar -->
+
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </div>
+    </header><!-- End Header -->
+
+    <div class="container">
+        <div class="text-center mb-5 mt-3 row">
+            <div class="col-md-4">
+                <hr>
+            </div>
+
+            <!--Personal Information-->
+            <div class="col-md-4">
+                <h2>Personal Information</h2>
+            </div>
+            <div class="col-md-4">
+                <hr>
+            </div>
+        </div>
+        <div id="personalInfo">
+            <div class="row mb-3">
+                <div class="col-md-3">
+                    <label>Name in Full</label>
+                </div>
+                <div class="col-md-9">
+                    <p id="fullname"></p>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-3">
+                    <label>Name with Initials</label>
+                </div>
+                <div class="col-md-9">
+                    <p id="initials"></p>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Gender</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p id="gender"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Email</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p id="email"></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Mobile Number</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p id="mobile"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Landline Number</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p id="landline"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Date of Birth</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p id="dob"></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>NIC Number</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p id="nic"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-3">
+                    <label>Home Address</label>
+                </div>
+                <div class="col-md-9">
+                    <p id="address"></p>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-3">
+                    <label>Name of the school</label>
+                </div>
+                <div class="col-md-9">
+                    <p id="school"></p>
+                </div>
+            </div>
+            <div class="text-center mb-5 mt-3 row">
+                <div class="col-md-4">
+                    <hr>
+                </div>
+                <!--A/L Results-->
+                <div class="col-md-4">
+                    <h2>A/L Results</h2>
+                </div>
+                <div class="col-md-4">
+                    <hr>
+                </div>
+            </div>
+            <div class="row mb-3" id="alresults"></div>
+            <div class="text-center mb-5 mt-3 row">
+                <div class="col-md-3">
+                    <hr>
+                </div>
+                <!--Extra curricular activities in school-->
+                <div class="col-md-6">
+                    <h2>Extra curricular Activities in school</h2>
+                </div>
+                <div class="col-md-3">
+                    <hr>
+                </div>
+            </div>
+            <div class="row mb-3" id="schoolact"></div>
+            <div class="text-center mb-5 mt-3 row">
+                <div class="col-md-4">
+                    <hr>
+                </div>
+                <!--University Education-->
+                <div class="col-md-4">
+                    <h2>University Education</h2>
+                </div>
+                <div class="col-md-4">
+                    <hr>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <label>Index Number</label>
+                </div>
+                <div class="col-md-2" id="index"></div>
+                <div class="col-md-2">
+                    <label>Academic Year</label>
+                </div>
+                <div class="col-md-2" id="acayear"></div>
+                <div class="col-md-2">
+                    <label>CGPA</label>
+                </div>
+                <div class="col-md-2" id="cgpa"></div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <label>Hostel Facility:</label>
+                </div>
+                <div class="col-md-2" id="hostel"></div>
+                <div class="col-md-2">
+                    <label>Mahapola/ Bursary</label>
+                </div>
+                <div class="col-md-2" id="mahapola"></div>
+            </div>
+            <div class="text-center mb-5 mt-5 row">
+                <div class="col-md-2">
+                    <hr>
+                </div>
+                <!--University Education-->
+                <div class="col-md-8">
+                    <h2>Achievements/ Extra-curricular activities in University Education</h2>
+                </div>
+                <div class="col-md-2">
+                    <hr>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-4 text-center">
+                    <label>Activity/ Achievement</label>
+                </div>
+                <div class="col-md-4 text-center">
+                    <label>Role</label>
+                </div>
+                <div class="col-md-4 text-center">
+                    <label>Year</label>
+                </div>
+            </div>
+            <div class="row mb-3" id="achievements"></div>
+            <div class="text-center mb-5 mt-3 row">
+                <div class="col-md-4">
+                    <hr>
+                </div>
+                <!--Family Details-->
+                <div class="col-md-4">
+                    <h2>Family Details</h2>
+                </div>
+                <div class="col-md-4">
+                    <hr>
+                </div>
+            </div>
+            <div class="row mb-3" id="family">
+                <label style="font-size: 20px;">Applicant - Name - age</label>
+                <div class="row mb-3 mt-3">
+                    <div class="col-md-3">
+                        <label>Occupation</label>
+                    </div>
+                    <div class="col-md-3"><p>job</p></div>
+                    <div class="col-md-3">
+                        <label>Gross monthly income</label>
+                    </div>
+                    <div class="col-md-3">income</div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-3">
+                    <label>Samurdhi beneficiary</label>
+                </div>
+                <div class="col-md-3">
+                    <p id="samurdi"></p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-2">
+                    <label>Special Notes</label>
+                </div>
+                <div class="col-md-10">
+                    <p id="notes"></p>
+                </div>    
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Vendor JS Files -->
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/vendor/php-email-form/validate.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/vendor/purecounter/purecounter.js"></script>
+    <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="../assets/js/main.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyBCxDWxQjgZPY1vw4mfqCD9-z1KHVmwY5o",
+            authDomain: "ces-scholar.firebaseapp.com",
+            projectId: "ces-scholar",
+            storageBucket: "ces-scholar.appspot.com",
+            messagingSenderId: "70196227792",
+            appId: "1:70196227792:web:0ee7454c470776bb3fb8d5",
+            measurementId: "G-M276X0C2XM"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+    <script src="../../assets/js/admin.js"></script>
+    <script>
+        displayUser();
+    </script>
+</body>

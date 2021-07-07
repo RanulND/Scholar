@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>CES | Scholar</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/CES Logo PNG.png" rel="icon">
+  <link href="assets/img/CES Logo PNG.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"> -->
+</head>
+
+<body>
+  <header id="header" class="header ">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/CES Logo PNG.png" alt="">
+
+      </a>
+      <nav class="navbar" id="navbar">
+        <a class="getstarted scrollto" href="index.html">Home</a>
+      </nav>
+      <!-- .navbar -->
+
+    </div>
+  </header>
+
+  <div class="container mt-5">
+    <div class="text-center mb-5">
+      <h1 style="font-weight: bolder;">CES | Scholar Application</h1>
+    </div>
+    <div class="text-center mb-5 row">
+      <div class="col-md-4">
+        <hr>
+      </div>
+
+      <!--Personal Information-->
+      <div class="col-md-4">
+        <h2>Personal Information</h2>
+      </div>
+      <div class="col-md-4">
+        <hr>
+      </div>
+    </div>
+    <form id="form" onsubmit="addRecord(event)">
+      <div class="form-group my-3">
+        <label for="formGroupExampleInput">1. Full Name</label>
+        <input type="text" class="form-control fix-rounded-right" id="nameInFull" required pattern="^[A-Za-z\s]{0,}$"
+          title="symbols and numbers not allowed">
+      </div>
+
+      <div class="form-group my-3">
+        <label for="formGroupExampleInput">2. Name with initials</label>
+        <input type="text" class="form-control fix-rounded-right" id="nameWithInitial" required
+          pattern="^[A-Za-z\s]{0,}$" title="symbols and numbers not allowed">
+      </div>
+
+      <div class="form-group my-3">
+        <label for="exampleInputEmail1">3. Email address</label>
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+
+      <div class="my-3">
+        <label class="mb-3">4. Phone Number</label><br>
+        <div class="form-inline mx-3 row">
+          <div class="col-md-2">
+            <label class="sr-only" for="inlineFormInputName2">Home (Landline)</label>
+          </div>
+          <div class="col-md-3">
+            <input type="text" class="form-control mb-2 mr-sm-2" id="homeno" placeholder="Home (Landline)"
+              title="0xxxxxxxxx">
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-2">
+            <label class="sr-only" for="inlineFormInputGroupUsername2">Mobile</label>
+          </div>
+          <div class="col-md-3">
+            <div class="input-group mb-2 mr-sm-2">
+              <input type="text" class="form-control" id="mobileno" placeholder="Mobile" required
+                pattern="^([0][7][0-9]{8})$" title="07xxxxxxxx">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="form-group my-3">
+        <label for="formGroupExampleInput">5. Home Address</label>
+        <input type="text" class="form-control fix-rounded-right" id="homeAddress" required pattern="^[A-Za-z\s]{0,}$"
+          title="symbols and numbers not allowed">
+      </div>
+
+      <div class="mb-3">
+        <label>6. Gender</label><br>
+        <div class="form-check form-check-inline mt-3">
+          <input class="form-check-input" type="radio" name="sex" id="Radio1" value="Male" required>
+          <label class="form-check-label" for="inlineRadio1">Male</label>
+        </div>
+        <div class="form-check form-check-inline mt-3">
+          <input class="form-check-input" type="radio" name="sex" id="Radio2" value="Female" required>
+          <label class="form-check-label" for="inlineRadio2">Female</label>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="row">
+          <div class="form-inline mb-4 col-md-2">
+            <label>7. Date of Birth</label>
+          </div>
+          <div class="col-md-3">
+            <input type="date" class="form-control" id="dob" required>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-2">
+          <label for="">8. NIC Number</label>
+        </div>
+        <div class="col-md-3">
+          <input type="text" class="form-control fix-rounded-right" id="nic" required>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-2">
+          <label for="">9. Name of the School</label>
+        </div>
+        <div class="col-md-3">
+          <input type="text" class="form-control fix-rounded-right" id="schoolName" required>
+        </div>
+      </div>
+
+      <!--A/L Results-->
+      <div class="row mb-3">
+        <label class="mb-3">10. A/L Results (A/B/C/S/W)</label>
+        <div class="col-md-2">
+          <label for="">Year of Examniation</label>
+        </div>
+        <div class="col-md-3">
+          <input type="text" class="form-control fix-rounded-right" id="alExamYear" required>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-2">
+          <label for="">Index No.</label>
+        </div>
+        <div class="col-md-3">
+          <input type="text" class="form-control fix-rounded-right" id="alIndexNo" required>
+        </div>
+
+        <div class="row mt-3 mb-3 px-3">
+          <div class="col-6 text-center">
+            <label for="">Subject</label>
+          </div>
+          <div class="col-6 text-center">
+            <label for="">Result</label>
+          </div>
+        </div>
+        <div class="row mb-3 px-5">
+          <div class="col-6 text-center">
+            <input type="text" class="form-control fix-rounded-right text-center" id="sub1" required>
+          </div>
+          <div class="col-6 text-center">
+            <input type="text" class="form-control fix-rounded-right text-center" id="result1" required>
+          </div>
+        </div>
+        <div class="row mb-3 px-5">
+          <div class="col-6 text-center">
+            <input type="text" class="form-control fix-rounded-right text-center" id="sub2" required>
+          </div>
+          <div class="col-6 text-center">
+            <input type="text" class="form-control fix-rounded-right text-center" id="result2" required>
+          </div>
+        </div>
+        <div class="row mb-3 px-5">
+          <div class="col-6 text-center">
+            <input type="text" class="form-control fix-rounded- text-center" id="sub3" required>
+          </div>
+          <div class="col-6 text-center">
+            <input type="text" class="form-control fix-rounded-right text-center" id="result3" required>
+          </div>
+        </div>
+        <div class="row mb-3 px-5">
+          <div class="col-6 text-center">
+            <label>English</label>
+          </div>
+          <div class="col-6 text-center">
+            <input type="text" class="form-control fix-rounded-right text-center" id="result4" required>
+          </div>
+        </div>
+        <div class="row mb-3 px-5">
+          <div class="col-6 text-center">
+            <label>General Knowledge</label>
+          </div>
+          <div class="col-6 text-center">
+            <input type="text" class="form-control fix-rounded-right text-center" id="result5" required>
+          </div>
+        </div>
+        <div class="row mb-3 px-5">
+          <div class="col-6 text-center">
+            <label>Z-Score</label>
+          </div>
+          <div class="col-6">
+            <input type="text" class="form-control fix-rounded-right text-center" id="result6" required>
+          </div>
+        </div>
+      </div>
+
+      <!--Activities - School-->
+      <div class="">
+        <label>11. Do you have proofs of your engagement in any extra-curricular activities during the school days
+          or
+          outside the school with achievement at the District, Provincial or National level?
+        </label>
+        <div class="table-exapand" style="overflow-x: scroll;">
+          <table class="table">
+            <tbody>
+              <tr>
+                <th rowspan="2">Type/Nature of Extra Curricular Activity</th>
+                <th colspan="5" style="text-align: center;">Place Obtained</th>
+              </tr>
+              <tr>
+                <th class="text-center">District</th>
+                <th class="text-center">Provincial</th>
+                <th class="text-center">National</th>
+                <th></th>
+              </tr>
+              <tr>
+                <td><input type="text" class="form-control" id="activityType" placeholder=""></td>
+                <td><input type="text" class="form-control" id="district" placeholder=""></td>
+                <td><input type="text" class="form-control" id="provincial" placeholder=""></td>
+                <td><input type="text" class="form-control" id="national" placeholder=""></td>
+                <td><button id="addActivity" class="btn" type="button" style="border: 0; background-color: #dfbe07;" onclick = "addActivities()"><i
+                      class='bi bi-plus'></i>&nbsp;Add</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="activities"></div>
+      </div>
+      <!--End of Personal Information-->
+
+      <!--University information-->
+      <div class="text-left mt-5 mb-5 row">
+        <div class="col-md-4"><hr></div>
+        <div class="col-md-4 text-center">
+          <h2>University Education</h2>
+        </div>
+        <div class="col-md-4"><hr></div>
+      </div>
+      <div class="row my-3">
+        <div class="col-md-2">
+          <label for="">1. Academic Year</label>
+        </div>
+        <div class="col-md-3">
+          <input type="text" class="form-control fix-rounded-right" id="academicYear" required>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2">
+          <label for="">2. Index No.</label>
+        </div>
+        <div class="col-md-3">
+          <input type="text" class="form-control fix-rounded-right" id="uniIndex" required>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-2">
+          <label for="">3. CGPA</label>
+        </div>
+        <div class="col-md-3">
+          <input type="text" class="form-control fix-rounded-right" id="cgpa" required>
+        </div>
+      </div>
+
+      <!--Extra Curricular Activities in University-->
+      <div class="row mb-3">
+        <label>4. Extracurricular activities involved in the university/ Achievements</label>
+        <div style="overflow-x:scroll;">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Activity/Sport/Club</th>
+                <th scope="col">Role/ Place obained</th>
+                <th scope="col">Year</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="text" class="form-control" id="act"></td>
+                <td><input type="text" class="form-control" id="role"></td>
+                <td><input type="text" class="form-control" id="year">
+                </td>
+                <td><button id="addECA" class="btn" type="button" style="border: 0; background-color: #dfbe07;" onclick = "addEca()"><i
+                      class='bi bi-plus'></i>&nbsp;Add</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <div id="ECA"></div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="">5. Are/ will you be given hostel facility?</label><br>
+        <div class="form-check form-check-inline mt-3">
+          <input class="form-check-input" type="radio" name="hostel" id="Radio1" value="yes" required>
+          <label class="form-check-label" for="inlineRadio1">Yes</label>
+        </div>
+        <div class="form-check form-check-inline mt-3">
+          <input class="form-check-input" type="radio" name="hostel" id="Radio2" value="no" required>
+          <label class="form-check-label" for="inlineRadio2">No</label>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="">6. Are you a recipient of Mahapola/Bursary sponsorship?</label><br>
+        <div class="form-check form-check-inline mt-3">
+          <input class="form-check-input" type="radio" name="schol" id="Radio1" value="yes" required>
+          <label class="form-check-label" for="inlineRadio1">Yes</label>
+        </div>
+        <div class="form-check form-check-inline mt-3">
+          <input class="form-check-input" type="radio" name="schol" id="Radio2" value="no" required>
+          <label class="form-check-label" for="inlineRadio2">No</label>
+        </div>
+      </div>
+      <!--End of University information-->
+
+      <!--Family Details-->
+      <div class="text-left mt-5 mb-5 row">
+        <div class="col-md-4"><hr></div>
+        <div class="col-md-4 text-center">
+          <h2>Family Details</h2>
+        </div>
+        <div class="col-md-4"><hr></div>
+      </div>
+      <div class="row mb-3 mt-5">
+        <label for="">1. Details of family members ( Mother / Father / Guardian / Sibilings )</label>
+
+        <div class="table-exapand">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Relationship</th>
+                <th scope="col">Occupation</th>
+                <th scope="col">Gross Monthly Income</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="text" class="form-control" id="famName-1" required></td>
+                <td><input type="text" class="form-control" id="age-1" required pattern="^[0-9][0-9]$"></td>
+                <td>Applicant</td>
+                <td><input type="text" class="form-control" id="occupation-1" required pattern="^[A-Za-z\s]{0,}$">
+                </td>
+                <td colspan="2"><input type="text" class="form-control" id="income-1" required>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="text" class="form-control" id="famName-2" required></td>
+                <td><input type="text" class="form-control" id="age-2" required pattern="^[0-9][0-9]$"></td>
+                <td>Father</td>
+                <td><input type="text" class="form-control" id="occupation-2" required pattern="^[A-za-z\s]{0,}$">
+                </td>
+                <td colspan="2"><input type="text" class="form-control" id="income-2" required>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="text" class="form-control" id="famName-3" required></td>
+                <td><input type="text" class="form-control" id="age-3" required pattern="^[0-9][0-9]$"></td>
+                <td>Mother</td>
+                <td><input type="text" class="form-control" id="occupation-3" required pattern="^[A-Za-z\s]{0,}$">
+                </td>
+                <td colspan="2"><input type="text" class="form-control" id="income-3" required>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="text" class="form-control" id="famName-4" placeholder="">
+                </td>
+                <td><input type="text" class="form-control" id="age-4" placeholder="" pattern="^[0-9]{0,}$"></td>
+                <td><input type="text" class="form-control" id="relationship-4" placeholder=""
+                    pattern="^[A-Za-z\s]{0,}$"></td>
+                <td><input type="text" class="form-control" id="occupation-4" placeholder="" pattern="^[A-Za-z\s]{0,}$">
+                </td>
+                <td><input type="text" class="form-control" id="income-4" placeholder=""></td>
+                <td><button id="addfam" class="btn" type="button" style="border: 0; background-color: #dfbe07;" onclick="addFam()"><i
+                      class='bi bi-plus'></i>&nbsp;Add</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="family"></div>
+      </div>
+      <div class="mb-3">
+        <label for="">2. Is your family a samurdhi beneficiary family?</label><br>
+        <div class="form-check form-check-inline mt-3">
+          <input class="form-check-input" type="radio" name="samurdi" id="Radio1" value="yes" required>
+          <label class="form-check-label" for="inlineRadio1">Yes</label>
+        </div>
+        <div class="form-check form-check-inline mt-3">
+          <input class="form-check-input" type="radio" name="samurdi" id="Radio2" value="no" required>
+          <label class="form-check-label" for="inlineRadio2">No</label>
+        </div>
+      </div>
+      <div class="row">
+        <label for="">3. Any special notes (regarding Income)</label>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"></label>
+          <textarea class="form-control" id="specialNote" rows="3"></textarea>
+        </div>
+      </div>
+      <!--End of Family Details-->
+
+      <div class="row mb-5">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="true">
+          <label class="form-check-label">
+            I certify that all of the above information furnished are true and accurate to best of my knowledge.
+            Further, if the information furnished is found to be false, I hereby agree that my scholarship will be
+            prematurely cancelled.
+          </label>
+        </div>
+      </div>
+      <div class="row text-center mb-3">
+        <button class="btn" style="background-color: #dfbe07; border: 0; width: 15%;" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <span>Civil Engineering Society University of Moratuwa</span>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+      </div>
+      <div class="social-links text-center">
+        <a href="#" class="twitter p-3"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook p-3"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram p-3"><i class="bi bi-instagram bx bxl-instagram"></i></a>
+        <a href="#" class="linkedin p-3"><i class="bi bi-linkedin bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+    class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/purecounter/purecounter.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBCxDWxQjgZPY1vw4mfqCD9-z1KHVmwY5o",
+    authDomain: "ces-scholar.firebaseapp.com",
+    projectId: "ces-scholar",
+    storageBucket: "ces-scholar.appspot.com",
+    messagingSenderId: "70196227792",
+    appId: "1:70196227792:web:0ee7454c470776bb3fb8d5",
+    measurementId: "G-M276X0C2XM"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script src="assets/js/application.js"></script>
+
+<!-- <script>
+  function addFam(){
+    console.log('fam wada');
+  }
+
+  function addActivities(){
+    console.log('act wada');
+  }
+
+  function addEca(){
+    console.log('eca wada');
+  }
+</script> -->
+</body>
+
+</html>
