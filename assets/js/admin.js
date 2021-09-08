@@ -18,7 +18,6 @@ function login(e) {
                 sessionStorage.setItem('level', JSON.stringify(doc.data().level));
 
                 if(doc.data().admin == "true"){
-                    console.log('wada');
                     location.href = "dashboard/index.html";
                 } 
             } else {
