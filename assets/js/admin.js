@@ -12,14 +12,9 @@ function login(e) {
         // console.log(doc.data());
         if (doc.exists) {
             if (doc.data().token === token) {
-                // console.log('logged-in');
-                // console.log(doc.data()); //session storage daanna
                 sessionStorage.setItem('admin', JSON.stringify(doc.data().admin));
-                sessionStorage.setItem('level', JSON.stringify(doc.data().level));
-
-                if(doc.data().admin == "true"){
-                    location.href = "dashboard/index.html";
-                } 
+                // sessionStorage.setItem('level', JSON.stringify(doc.data().level));
+                    location.href = "./dashboard/index.html";
             } else {
                 alert("Incorrect Password");
                 console.log('Incorrect Password');
